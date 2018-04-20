@@ -22,8 +22,12 @@ class Google_Service_Bigquery_JobConfigurationLoad extends Google_Collection
   public $allowQuotedNewlines;
   public $autodetect;
   public $createDisposition;
+  protected $destinationEncryptionConfigurationType = 'Google_Service_Bigquery_EncryptionConfiguration';
+  protected $destinationEncryptionConfigurationDataType = '';
   protected $destinationTableType = 'Google_Service_Bigquery_TableReference';
   protected $destinationTableDataType = '';
+  protected $destinationTablePropertiesType = 'Google_Service_Bigquery_DestinationTableProperties';
+  protected $destinationTablePropertiesDataType = '';
   public $encoding;
   public $fieldDelimiter;
   public $ignoreUnknownValues;
@@ -76,6 +80,20 @@ class Google_Service_Bigquery_JobConfigurationLoad extends Google_Collection
     return $this->createDisposition;
   }
   /**
+   * @param Google_Service_Bigquery_EncryptionConfiguration
+   */
+  public function setDestinationEncryptionConfiguration(Google_Service_Bigquery_EncryptionConfiguration $destinationEncryptionConfiguration)
+  {
+    $this->destinationEncryptionConfiguration = $destinationEncryptionConfiguration;
+  }
+  /**
+   * @return Google_Service_Bigquery_EncryptionConfiguration
+   */
+  public function getDestinationEncryptionConfiguration()
+  {
+    return $this->destinationEncryptionConfiguration;
+  }
+  /**
    * @param Google_Service_Bigquery_TableReference
    */
   public function setDestinationTable(Google_Service_Bigquery_TableReference $destinationTable)
@@ -88,6 +106,20 @@ class Google_Service_Bigquery_JobConfigurationLoad extends Google_Collection
   public function getDestinationTable()
   {
     return $this->destinationTable;
+  }
+  /**
+   * @param Google_Service_Bigquery_DestinationTableProperties
+   */
+  public function setDestinationTableProperties(Google_Service_Bigquery_DestinationTableProperties $destinationTableProperties)
+  {
+    $this->destinationTableProperties = $destinationTableProperties;
+  }
+  /**
+   * @return Google_Service_Bigquery_DestinationTableProperties
+   */
+  public function getDestinationTableProperties()
+  {
+    return $this->destinationTableProperties;
   }
   public function setEncoding($encoding)
   {

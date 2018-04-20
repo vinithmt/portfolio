@@ -116,7 +116,7 @@ return [
         // 'Illuminate\Html\HtmlServiceProvider', // Example
 
         'System\ServiceProvider',
-		Barryvdh\Debugbar\ServiceProvider::class,
+		//Barryvdh\Debugbar\ServiceProvider::class,
     ]),
 
     /*
@@ -133,7 +133,7 @@ return [
     'aliases' => array_merge(include(base_path('modules/system/aliases.php')), [
 
         // 'Str' => 'Illuminate\Support\Str', // Example
-		'Debugbar' => Barryvdh\Debugbar\Facade::class,
+		//'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ]),
 

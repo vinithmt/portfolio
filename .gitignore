@@ -1,10 +1,5 @@
 .DS_Store
 *.log
 .env
-/storage/framework/cache/
-/storage/cms/twig/
-/storage/cms/cache/
-/storage/cms/combiner/assets/
-/storage/framework/sessions/
-/storage/cms/disabled.json
-/storage/framework/services.json
+/storage/framework/cache/ 
+/storage/cms/cache/ 

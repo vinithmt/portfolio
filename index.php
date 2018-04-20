@@ -1,5 +1,4 @@
 <?php
-ini_set('display_errors', 1);
 /**
  * October - The PHP platform that gets back to basics.
  *
