@@ -1,6 +1,6 @@
 # portfolio
 Octobercms is been using. This cms plaftform developed from Laravel framework.
-Plugins:-
+*Plugins:-
 - Portfolio https://octobercms.com/plugin/individuart-work
 - Timeline https://octobercms.com/plugin/octo-timeline
 - Google Analytics https://octobercms.com/plugin/rainlab-googleanalytics
