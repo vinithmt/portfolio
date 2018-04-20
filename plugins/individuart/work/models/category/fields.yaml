@@ -1,0 +1,32 @@
+fields:
+    id:
+        label: ID
+        disabled: true
+        type: text
+    name:
+        label: 'individuart.work::lang.backend.label_name'
+        required: true
+        type: text
+    sort_order:
+        label: 'sort order'
+        oc.commentPosition: ''
+        span: auto
+        type: number
+    works:
+        label: 'individuart.work::lang.backend.work'
+        type: relation
+        nameFrom: name
+        span: auto
+    featured_image:
+        label: 'individuart.work::lang.backend.label_featured_image'
+        span: full
+        oc.commentPosition: ''
+        mode: file
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        type: fileupload
+    published:
+        label: 'individuart.work::lang.backend.label_published'
+        type: checkbox

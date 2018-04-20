@@ -1,0 +1,56 @@
+==
+<?
+
+use Individuart\Work\Models\Work;
+
+function onStart()
+{
+    $datetime1 = new DateTime('2005-12-26');
+    $datetime2 = new DateTime('now');
+    $interval = $datetime1->diff($datetime2);
+
+    $this['experience'] =  $interval->format('%y');
+    $this['projects'] = Work::where(['published' => 1])->get()->count();
+}
+?>
+==
+ 
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <img class="img-responsive" src="{{ 'assets/images/profile.png'|theme }}" alt="">
+            <div class="intro-text">
+                <!-- <span class="name">Vinith Thaithara</span> -->
+                <hr class="star-light">
+                <div class="certifcate_thumbnails"> 
+                     <a href="https://u.magento.com/certification/directory/dev/162393/" target="_blank" >
+					 <img   src="{{ 'assets/images/magento_dev_logo.jpg'|theme }}"/> 
+                    </a>
+                     <a href="http://www.zend.com/en/yellow-pages/ZEND021725" target="_blank" >
+					 <img id="cert_php_logo"  class="img-responsive" src="{{ 'assets/images/zce-php5-3-logo.gif'|theme }}"   /></a>
+					 <img id="cert_mcp_logo"  class="img-responsive" src="{{ 'assets/images/mcp.png'|theme }}"   /> 
+				</div>
+                <span class="skills">PHP programmer - An open source enthusiast</span>
+            </div> 
+            <div class="counter col-lg-10 col-lg-offset-3">
+                    <div >
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                <div class="employees">
+                                    <p class="counter-count">{{ projects }}</p>
+                                    <p class="employee-p">Projects</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-3 col-sm-3 col-xs-12">
+                                <div class="customer">
+                                    <p class="counter-count">{{ experience }}</p>
+                                    <p class="customer-p">Experience(in Yrs)</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
