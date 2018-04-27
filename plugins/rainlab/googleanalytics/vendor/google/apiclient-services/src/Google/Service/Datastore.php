@@ -90,8 +90,38 @@ class Google_Service_Datastore extends Google_Service
                   'required' => true,
                 ),
               ),
+            ),'export' => array(
+              'path' => 'v1/projects/{projectId}:export',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'projectId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'import' => array(
+              'path' => 'v1/projects/{projectId}:import',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'projectId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
             ),'lookup' => array(
               'path' => 'v1/projects/{projectId}:lookup',
+              'httpMethod' => 'POST',
+              'parameters' => array(
+                'projectId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+              ),
+            ),'reserveIds' => array(
+              'path' => 'v1/projects/{projectId}:reserveIds',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'projectId' => array(
@@ -169,10 +199,6 @@ class Google_Service_Datastore extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -180,6 +206,10 @@ class Google_Service_Datastore extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
