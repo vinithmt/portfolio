@@ -23,4 +23,5 @@
   'RainLab\\GoogleAnalytics\\Classes\\Analytics' => 'plugins\\rainlab\\googleanalytics\\classes\\Analytics.php',
   'RainLab\\GoogleAnalytics\\Classes\\CacheItemPool' => 'plugins\\rainlab\\googleanalytics\\classes\\CacheItemPool.php',
   'RainLab\\GoogleAnalytics\\Classes\\CacheItem' => 'plugins\\rainlab\\googleanalytics\\classes\\CacheItem.php',
+  'backend\\Controllers\\auth' => 'modules\\backend\\controllers\\auth.php',
 );
