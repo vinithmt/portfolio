@@ -34,21 +34,20 @@
     </div>
            
 
-    <div class="{% if loop.index is divisible by(2) %}col-sm-offset-6 col-sm-6  {% else %}col-sm-6 {% endif %}  timeline-item">
+    <div class="{% if loop.index is divisibleby(2) %}col-sm-offset-6 col-sm-6  {% else %}col-sm-6 {% endif %}  timeline-item">
         <div class="row">
-            <div class="{% if loop.index is divisible by(2) %}col-sm-offset-1 col-sm-11{% else %}col-sm-11{% endif %}">
-                <div class="timeline-panel {% if loop.index is divisible by(2) %}debits{% else %}credits{% endif %}">
+            <div class="{% if loop.index is divisibleby(2) %}col-sm-offset-1 col-sm-11{% else %}col-sm-11{% endif %}">
+                <div class="timeline-panel {% if loop.index is divisibleby(2) %}debits{% else %}credits{% endif %}">
                     <ul class="timeline-panel-ul">
                         <li><span class="importo">{{ entry.title }}</span></li>
                         <li><span class="causale"> {{ entry.text|raw }} </span> </li> 
+                        <li><span class="project">View Projects </span> </li> 
                     </ul>
                 </div>
 
             </div>
         </div>
     </div>
- 
-
     
     
 
