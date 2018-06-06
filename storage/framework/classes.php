@@ -24,6 +24,4 @@
   'RainLab\\GoogleAnalytics\\Classes\\CacheItemPool' => 'plugins\\rainlab\\googleanalytics\\classes\\CacheItemPool.php',
   'RainLab\\GoogleAnalytics\\Classes\\CacheItem' => 'plugins\\rainlab\\googleanalytics\\classes\\CacheItem.php',
   'backend\\Controllers\\auth' => 'modules\\backend\\controllers\\auth.php',
-  'octo\\timeline\\Controllers\\entries' => 'plugins\\octo\\timeline\\controllers\\entries.php',
-  'individuart\\work\\Controllers\\works' => 'plugins\\individuart\\work\\controllers\\works.php',
 );

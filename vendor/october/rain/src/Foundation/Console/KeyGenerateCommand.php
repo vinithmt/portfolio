@@ -39,45 +39,17 @@ class KeyGenerateCommand extends KeyGenerateCommandBase
      */
     public function handle()
     {
-        $key = $this->generateRandomKey();
-
-        if ($this->option('show')) {
-            return $this->line('<comment>'.$key.'</comment>');
-        }
-
-        // Next, we will replace the application key in the config file so it is
-        // automatically setup for this developer. This key gets generated using a
-        // secure random byte generator and is later base64 encoded for storage.
-        if (!$this->setKeyInConfigFile($key)) {
-            return;
-        }
-
-        $this->laravel['config']['app.key'] = $key;
-
-        $this->info("Application key [$key] set successfully.");
-    }
-
-    /**
-     * Set the application key in the config file.
-     *
-     * @param  string  $key
-     * @return bool
-     */
-    protected function setKeyInConfigFile($key)
-    {
-        if (!$this->confirmToProceed()) {
-            return false;
-        }
-
-        $currentKey = $this->laravel['config']['app.key'];
-
         list($path, $contents) = $this->getKeyFile();
 
-        $contents = str_replace($currentKey, $key, $contents);
+        $oldKey = $this->laravel['config']['app.key'];
+
+        parent::handle();
+
+        $newKey = $this->laravel['config']['app.key'];
+
+        $contents = str_replace($oldKey, $newKey, $contents);
 
         $this->files->put($path, $contents);
-
-        return true;
     }
 
     /**
