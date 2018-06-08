@@ -95,10 +95,9 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
-
+      
         return [
-            'Company\Project\Components\MyComponent' => 'myComponent',
+            'Company\Project\Components\Projectlist' => 'projectlist',
         ];
     }
 
