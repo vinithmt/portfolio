@@ -24,4 +24,13 @@
   'RainLab\\GoogleAnalytics\\Classes\\CacheItemPool' => 'plugins\\rainlab\\googleanalytics\\classes\\CacheItemPool.php',
   'RainLab\\GoogleAnalytics\\Classes\\CacheItem' => 'plugins\\rainlab\\googleanalytics\\classes\\CacheItem.php',
   'backend\\Controllers\\auth' => 'modules\\backend\\controllers\\auth.php',
+  'company\\project\\Plugin' => 'plugins\\company\\project\\Plugin.php',
+  'Individuart\\Work\\Controllers\\Works' => 'plugins\\individuart\\work\\controllers\\Works.php',
+  'Company\\Project\\Models\\Project' => 'plugins\\company\\project\\models\\Project.php',
+  'octo\\timeline\\Controllers\\entries' => 'plugins\\octo\\timeline\\controllers\\entries.php',
+  'cms\\Controllers\\index' => 'modules\\cms\\controllers\\index.php',
+  'Company\\Project\\Components\\Projectlist' => 'plugins\\company\\project\\components\\Projectlist.php',
+  'October\\Demo\\Components\\Todo' => 'plugins\\october\\demo\\components\\Todo.php',
+  'RainLab\\Builder\\Components\\RecordList' => 'plugins\\rainlab\\builder\\components\\RecordList.php',
+  'RainLab\\Builder\\Components\\RecordDetails' => 'plugins\\rainlab\\builder\\components\\RecordDetails.php',
 );
