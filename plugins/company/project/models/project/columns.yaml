@@ -1,0 +1,14 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    company_id:
+        label: Company Id
+        searchable: true
+    work_id:
+        label: Work Id
+        searchable: true

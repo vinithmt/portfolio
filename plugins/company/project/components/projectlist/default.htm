@@ -1,0 +1,74 @@
+{% set projectlist = __SELF__.projectlist %}
+ {% set works = __SELF__.works %}
+
+{% if projectlist is not empty %}
+
+
+    {% for company in projectlist.company %}
+ 
+<div class="portfolio-modal modal fade" id="portfolioCompanyModal{{company.attributes.id}}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+                <div class="rl">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div class="modal-body">
+
+                        <h2>{{ company.attributes.title}} <br/>Project{% if company.works|length > 0 %}s{% endif %} </h2>
+                        <hr class="star-primary">
+
+                        <div class="container-fluid">
+                            <div style="margin-bottom:10px;" class="row">
+                                <div class=" col-sm-8 col-md-9 col-lg-12 col-xl-7">
+                                    <div class="panel-group widget" id="accordion-{{company.attributes.id}}" style="margin-top:0">
+     
+                                        {% for work in company.works %}
+ 
+
+                                        <div class="panel panel-default projectaccordion">
+                                            <div class="panel-heading accordion-toggle" style="border-bottom:1px #C1C1C1 solid">
+                                                <h4 class="panel-title">
+                            <a data-toggle="collapse" class="accordion-toggle" data-parent="#accordion-{{company.attributes.id}}" href="#collapse{{ work.id}}-{{company.attributes.id}}"style=" color:#666">{{ work.name}}</a>
+                        </h4>
+                                            </div>
+                                            <div id="collapse{{ work.id}}-{{company.attributes.id}}" class="panel-collapse collapse ">
+                                                <div class="panel-body">
+                                                    <div class="description">
+                                                        {{work.description | raw}}
+                                                    </div>
+                                                    <div class="long_description">
+                                                        {{work.long_description | raw}}
+                                                    </div>
+                                                    <div class="env">
+                                                        {{work.content | raw}}
+                                                    </div>
+                                                      {% if work.url %}
+                                                     <div class="url">
+                                                        Url: <a href="{{work.url}}" target="_blank">www.{{ work.name}}</a>
+                                                    </div>
+                                                     {% endif %} 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endfor %}
+{% endif %} 
+ 
