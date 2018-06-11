@@ -1,0 +1,49 @@
+.progress {
+    height: 35px;
+}
+.progress .skill {
+    font: normal 12px "Open Sans Web";
+    line-height: 35px;
+    padding: 0;
+    margin: 0 0 0 20px;
+    text-transform: uppercase;
+}
+.progress .skill .val {
+    float: right;
+    font-style: normal;
+    margin: 0 20px 0 0;
+}
+.progress-bar {
+    text-align: left;
+    transition-duration: 3s;
+}
+.progress .mysql {
+    background-color: #f29111;
+}
+.progress .html {
+    background-color: #f16525;
+}
+.progress .javascript {
+    background-color: #c5ac00;
+}
+.progress .nodejs {
+    background-color: #669f64;
+}
+.progress .ajax {
+    background-color: #2b8aca;
+}
+.progress .css {
+    background-color: #2864f1;
+}
+.progress .gulp {
+    background-color: #ec4a4b;
+}
+.progress .jquery {
+    background-color: #0769ad;
+}
+.progress .bootstrap {
+    background-color: #9a47c3;
+}
+.progress .php {
+    background-color: #8891bf;
+}

@@ -1,0 +1,40 @@
+==
+<?
+
+use Individuart\Work\Models\Work;
+
+function onStart()
+{
+    $datetime1 = new DateTime('2005-12-26');
+    $datetime2 = new DateTime('now');
+    $interval = $datetime1->diff($datetime2);
+
+    $this['experience'] =  $interval->format('%y');
+    $this['projects'] = Work::where(['published' => 1])->get()->count();
+}
+?>
+==
+<section id="home" class="tt-fullHeight" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
+    <div class="intro">
+        <div class="intro-sub">Vinith Thaithara</div>
+        <h1>PHP<span> Developer</span></h1>
+        <p>An open source enthusiast.</p>
+
+        <div class="social-icons">
+        <ul class="list-inline certifcate_thumbnails" >
+          <li> <a href="https://u.magento.com/certification/directory/dev/162393/" target="_blank" >
+                     <img   src="{{ 'assets/images/magento_dev_logo.jpg'|theme }}"/> 
+                    </a></li>
+          <li><a href="http://www.zend.com/en/yellow-pages/ZEND021725" target="_blank" >
+                     <img id="cert_php_logo"  class="img-responsive" src="{{ 'assets/images/zce-php5-3-logo.gif'|theme }}"   /></a></li>
+          <li> <img id="cert_mcp_logo"  class="img-responsive" src="{{ 'assets/images/mcp.png'|theme }}"   /></li> 
+        </ul>
+        </div> <!-- /.social-icons --> 
+  
+    </div>
+
+    <div class="mouse-icon">
+      <div class="wheel"></div>
+    </div>
+</section>
+ 

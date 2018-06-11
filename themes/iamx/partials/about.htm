@@ -1,0 +1,52 @@
+==
+<? 
+
+function onStart()
+{
+    $datetime1 = new DateTime('2005-12-26');
+    $datetime2 = new DateTime('now');
+    $interval = $datetime1->diff($datetime2);
+
+    $this['experience'] =  $interval->format('%y');
+    
+}
+?>
+==
+<section id="about" class="about-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">About Me</h2>
+
+        <div class="row">
+
+          <div class="col-md-4 col-md-push-8">
+            <div class="biography">
+              <div class="myphoto">
+                <img src="{{ 'assets/images/myphoto.jpg'|theme }}" alt="">
+              </div>
+              <ul>
+                <li><strong>Name:</strong> Vinith Thaithara</li> 
+                <li><strong>Phone:</strong> (469)-626-7919</li>
+                <li><strong>Email:</strong> job.vinith@outlook.com</li>
+              </ul>
+            </div>
+          </div> <!-- col-md-4 -->
+
+          <div class="col-md-8 col-md-pull-4">
+            <div class="short-info wow fadeInUp">
+              <h3>Objective</h3>
+              <p>{{ experience }} years of experience and good hands on web technologies such as PHP, mySQL, HTML5, CSS, JQUERY, & JS etc. Love to learn new technology and take the challenge to do remarkable application. A good self learner, expertise in various PHP frameworks such as Zend, Codeignitor, CakePHP, Yii frameworks.Good hands on customizing open source application like Joomla, Wordpress, Magento, SugarCRM etc. Good hands on solving webs and server side application technical issues. Have experience in handling onsite and offshore team and ability to handle more team members.Good experience using project management and methodology tools like Jira and Scrum etc. Experience in reporting to the Top Management Members. Good hands on unit testing.</p>
+            </div>
+            <div class="my-signature">
+              <img src="assets/images/sign.png" alt="">
+            </div>
+
+            <div class="download-button">
+              <a class="btn btn-info btn-lg" href="#contact"><i class="fa fa-paper-plane"></i>Send me message</a>
+              <a class="btn btn-primary btn-lg" href="https://docs.google.com/document/d/1YDyNS2srJ26RfaRiyuY2I_PYm9_C2hCHQFDw9BVVt7Y/edit?usp=sharing"><i class="fa fa-download"></i>download resume</a>
+            </div>
+          </div>
+
+
+        </div> <!-- /.row -->
+      </div> <!-- /.container -->
+    </section> 
