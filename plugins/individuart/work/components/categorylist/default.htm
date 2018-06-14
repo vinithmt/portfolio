@@ -3,15 +3,21 @@
 
 {% if categories is not empty %}
     {% for cat in categories %}
-    <div class="col-sm-4 portfolio-item">
-        <a href="#portfolioModal{{cat.id}}" class="portfolio-link" data-toggle="modal">
-            <div class="caption">
-                <div class="caption-content">
-                    <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-            </div>
-             <img   id="cat-{{cat.id}}" src="{{cat.featured_image.path}}" class="img-responsive" alt="{{cat.name}}"> 
-        </a>
-    </div> 
+    <div class="portfolio-item col-xs-12 col-sm-4 col-md-4" data-groups='["all", "identety", "interface"]'>
+              <div class="portfolio-bg">
+                <div class="portfolio">
+                  <div class="tt-overlay"></div>
+                  <div class="links">
+
+                    <a href="#portfolioModal{{cat.id}}" class="portfolio-link" data-toggle="modal"><i class="fa fa-search-plus fa-3x"></i></a>
+                    
+                  </div><!-- /.links -->
+                  <img   id="cat-{{cat.id}}" src="{{cat.featured_image.path}}" class="img-responsive" alt="{{cat.name}}"> 
+                   
+                </div><!-- /.portfolio -->
+              </div><!-- /.portfolio-bg -->
+    </div><!-- /.portfolio-item -->
+ 
+   
     {% endfor %}
-{% endif %} 
+{% endif %}

@@ -12,7 +12,11 @@
                                 {% set this_date = entry.date|date("Y-m-d") %}
                             <li class="{% if loop.index is divisible by(2) %} timeline-inverted  {% else %}  {% endif %} ">
                                 <div class="posted-date">
-                                  <span class="month">{{ entry.date|date('m') }}/{{ entry.date|date('Y') }} </span>
+                                  <span class="month">{{ entry.date|date('Y') }}  
+                                    {% if entry.end_date %}
+                                       - {{ entry.end_date|date('Y') }}
+                                    {% endif %}  
+                              </span>
                                 </div><!-- /posted-date -->
 
                                 <div class="timeline-panel wow fadeInUp">

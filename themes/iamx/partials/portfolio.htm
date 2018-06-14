@@ -1,13 +1,16 @@
 [Categorylist]
 ==
-<div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                       {% component 'Categorylist' %}      
-            </div>
-</div>
+ <section id="works" class="works-section section-padding">
+      <div class="container">
+        <h2 class="section-title wow fadeInUp">Works</h2>
+ 
+
+        <div class="row">
+          <div id="grid">
+          	{% component 'Categorylist' %}   
+
+             
+          </div><!-- /#grid -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section> 
