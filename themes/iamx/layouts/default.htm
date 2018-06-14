@@ -78,7 +78,7 @@ description = "Default"
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#resume">Experience</a></li>
+            <li><a href="#resume">Resume</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#works">Works</a></li>
             <li><a href="#blog">Blog</a></li>
@@ -118,57 +118,18 @@ description = "Default"
     <!-- Resume Section -->
     <section id="resume" class="resume-section section-padding">
         <div class="container">
-            <h2 class="section-title wow fadeInUp">Experience</h2> 
+            <h2 class="section-title wow fadeInUp">Resume</h2>
             <div class="row">
-                <div class="col-md-12">
-                    <!-- <div class="resume-title">
-                        <h3>Experience</h3>
-                    </div> -->
-                    <div class="resume">
-                        <ul class="timeline">
-                            <li class="timeline-inverted">
-                                <div class="posted-date">
-                                  <span class="month">2011-2013</span>
-                                </div><!-- /posted-date -->
+                <div class="col-md-12">{% partial "education" %}</div>
+            </div><!-- /row -->
 
-                                <div class="timeline-panel wow fadeInUp">
-                                    <div class="timeline-content">
-                                        <div class="timeline-heading">
-                                            <h3>Junior ui designer</h3>
-                                            <span>XYZ Design Home, One Street, Boston</span>
-                                        </div><!-- /timeline-heading -->
-
-                                        <div class="timeline-body">
-                                            <p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
-                                        </div><!-- /timeline-body -->
-                                    </div> <!-- /timeline-content -->
-                                </div> <!-- /timeline-panel -->
-                            </li>
-
-                            <li>
-                                <div class="posted-date">
-                                  <span class="month">2013-2015</span>
-                                </div><!-- /posted-date -->
-
-                                <div class="timeline-panel wow fadeInUp">
-                                    <div class="timeline-content">
-                                        <div class="timeline-heading">
-                                            <h3>Lead UX Consultant</h3>
-                                            <span>Lucky8 Designing Firm, California</span>
-                                        </div><!-- /timeline-heading -->
-
-                                        <div class="timeline-body">
-                                            <p>Completely provide access to seamless manufactured products before functionalized synergy. Progressively redefine competitive.</p>
-                                        </div><!-- /timeline-body -->
-                                    </div> <!-- /timeline-content -->
-                                </div><!-- /timeline-panel -->
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="row">
+                <div class="col-md-12">  {% partial "company" %}</div>
             </div><!-- /row -->
         </div><!-- /.container -->
     </section><!-- End Resume Section -->
+
+   <!-- End Resume Section -->
 
 
     <!-- Skills Section -->

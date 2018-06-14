@@ -2,60 +2,33 @@
 {% set temp_date = '' %}
 
 
-<div class="container">
-   <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Work Timeline</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-    <div id="timeline">
-    <div class="row timeline-movement timeline-movement-top">
-    <div class="timeline-badge timeline-future-movement">
-        <a href="javascript:void(0);">
-            <span class="glyphicon glyphicon-plus"></span>
-        </a>
-    </div>
-    <div class="timeline-badge timeline-filter-movement">
-        <a href="javascript:void(0);">
-            <span class="glyphicon glyphicon-time"></span>
-        </a>
-    </div>
+                    <div class="resume-title">
+                        <h3>Experience</h3>
+                    </div>
+                    <div class="resume">
+                        <ul class="timeline">
 
-</div> 
-{% for entry in entries %} 
-<div class="row timeline-movement">
-{% set this_date = entry.date|date("Y-m-d") %}
-    <div class="timeline-badge">
-        <span class="timeline-balloon-date-day"> {{ entry.date|date('m') }} 
-        </span>
-        <span class="timeline-balloon-date-month"> {{ entry.date|date('Y') }} 
-        </span>
-    </div>
-           
+                            {% for entry in entries %}  
+                                {% set this_date = entry.date|date("Y-m-d") %}
+                            <li class="{% if loop.index is divisible by(2) %} timeline-inverted  {% else %}  {% endif %} ">
+                                <div class="posted-date">
+                                  <span class="month">{{ entry.date|date('m') }}/{{ entry.date|date('Y') }} </span>
+                                </div><!-- /posted-date -->
 
-    <div class="{% if loop.index is divisible by(2) %}col-sm-offset-6 col-sm-6  {% else %}col-sm-6 {% endif %}  timeline-item">
-        <div class="row">
-            <div class="{% if loop.index is divisible by(2) %}col-sm-offset-1 col-sm-11{% else %}col-sm-11{% endif %}">
-                <div class="timeline-panel {% if loop.index is divisible by(2) %}debits{% else %}credits{% endif %}">
-                    <ul class="timeline-panel-ul">
-                        <li><span class="importo">{{ entry.title }}</span></li>
-                        <li><span class="causale"> {{ entry.text|raw }} </span> </li> 
-                        <li><span class="project"><a href="#portfolioCompanyModal{{entry.id}}" class="portfolio-link" data-toggle="modal">View Projects</a></span> </li> 
-                    </ul>
-                </div>
+                                <div class="timeline-panel wow fadeInUp">
+                                    <div class="timeline-content">
+                                        <div class="timeline-heading">
+                                            <h3>{{ entry.title }}</h3>
+                                            <span>{{ entry.text|raw }}</span>
+                                        </div><!-- /timeline-heading -->
 
-            </div>
-        </div>
-    </div>
-    
-    
+                                        <div class="timeline-body">
+                                            <p><span class="project"><a href="#portfolioCompanyModal{{entry.id}}" class="portfolio-link" data-toggle="modal">View Projects</a></span></p>
+                                        </div><!-- /timeline-body -->
+                                    </div> <!-- /timeline-content -->
+                                </div> <!-- /timeline-panel -->
+                            </li>
 
-</div> 
-  
-
-  {% endfor %}
-
-</div>
-</div>
-</div>
+                             {% endfor %}
+                        </ul>
+                    </div> 
