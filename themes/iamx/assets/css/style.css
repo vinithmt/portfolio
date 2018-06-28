@@ -629,7 +629,7 @@ SOCIAL ICON
 /* === Video Section === */
 
 .video-section {
-    background: url(../../assets/images/video-bg.jpg) no-repeat center center;
+    background: url(../../assets/images/available.jpg) no-repeat center center;
     background-size: cover;
     position: relative;
     min-height: 500px;
@@ -1186,7 +1186,7 @@ Resume Timeline
     position: relative;
     color: #68c3a3;
     font-size: 16px;
-    margin: 0 13px;
+    margin: 35px 35px;
     z-index: 100;
 }
 .links a:hover i {
@@ -1804,7 +1804,7 @@ Icon for all respective meta
 }
 
 .video-introducing{
-    background: url(../images/video-bg.jpg) no-repeat center center;
+    background: url(../images/available.jpg) no-repeat center center;
     -webkit-background-size: cover;
     background-size: cover;
     min-height: 390px;
@@ -1822,4 +1822,8 @@ margin-top: 73px; }
 .portfolio-link:hover{
    color:#fff;
    text-decoration: underline; 
+}
+.timeline>li .timeline-content:hover a{
+    
+    color: #fff;
 }

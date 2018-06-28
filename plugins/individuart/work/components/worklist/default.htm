@@ -3,12 +3,13 @@
 
 {% if categories is not empty %}
     {% for cat in categories %}
-    
  
-<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+
+ <div class="modal fade bs-example-modal-lg" tabindex="-1" id="portfolioModal{{cat.id}}" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
-      
+       
+
                         <h2>{{ cat.name}} Project{% if cat.works|length > 0 %}s{% endif %}</h2>
                         <hr class="star-primary">
 
@@ -16,8 +17,10 @@
                             <div style="margin-bottom:10px;" class="row">
                                 <div class=" col-sm-8 col-md-9 col-lg-12 col-xl-7">
                                     <div class="panel-group widget" id="accordion-{{cat.id}}" style="margin-top:0">
+     
+                                       {% for work in cat.works %}
+ 
 
-                                        {% for work in cat.works %}
                                         <div class="panel panel-default projectaccordion">
                                             <div class="panel-heading accordion-toggle" style="border-bottom:1px #C1C1C1 solid">
                                                 <h4 class="panel-title">
@@ -49,9 +52,13 @@
                             </div>
                         </div>
 
-    </div>
+                    
+</div>
   </div>
 </div>
+
+
+
  
 {% endfor %}
 {% endif %} 
