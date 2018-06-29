@@ -31,7 +31,10 @@ description = "Default"
   <link href="{{ 'assets/css/responsive.css'|theme }}" rel="stylesheet">
 
    <link href="{{ 'assets/css/timeline.css'|theme }}" rel="stylesheet">
-
+ <link href="{{ 'assets/OwlCarousel2-2.3.4/owl.carousel.css'|theme }}" rel="stylesheet">
+  <link href="{{ 'assets/OwlCarousel2-2.3.4/owl.theme.default.css'|theme }}" rel="stylesheet">
+ 
+ 
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -144,18 +147,8 @@ description = "Default"
     <!-- End Facts Section -->
 
 
-    <!-- Blog Section -->
-    <section id="blog" class="latest-blog-section section-padding">
-      <div class="container">
-        <h2 class="section-title wow fadeInUp">Reviews</h2>
-
-       
-        
-        
-      </div><!-- /.container -->
-    </section><!-- End Blog Section -->
-
-
+    <!-- Review Section -->
+    {% partial "review" %}
     <!-- Hire Section -->
     <section class="hire-section text-center" data-stellar-vertical-offset="50" data-stellar-background-ratio="0.2">
       <div class="hire-section-bg">
@@ -278,5 +271,13 @@ description = "Default"
   <script src="{{ 'assets/js/jquery.fitvids.js'|theme }}"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
   <script src="{{ 'assets/js/scripts.js'|theme }}"></script> 
+  <script src="{{ 'assets/OwlCarousel2-2.3.4/owl.carousel.js'|theme }}"></script> 
+  <script type="text/javascript">
+  $('.owl-carousel').owlCarousel({
+    items:1,
+    margin:10,
+    autoHeight:true
+});
+</script>
 </body>
 </html>

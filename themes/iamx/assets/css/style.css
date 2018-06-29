@@ -314,7 +314,9 @@ ul.list-check li::before {
     margin: 0 auto;
 }
 
-
+#about  {
+   /*padding: 77px 0 100px!important;*/
+}
 
 /* === HOME === */
 @media (max-width : 640px) {
@@ -564,12 +566,12 @@ SOCIAL ICON
     float: left;
 }
 
-.my-signature{
+/*.my-signature{
     margin-bottom: 45px;
 }
 .my-signature img{
     width: inherit;
-}
+}*/
 
 
 /*download-button*/
@@ -1827,3 +1829,11 @@ margin-top: 73px; }
     
     color: #fff;
 }
+/*Review*/
+.review-by {
+    text-align: center;
+    font-weight: bold;
+     font-style: italic;;
+    font-size: 13px;
+}
+
